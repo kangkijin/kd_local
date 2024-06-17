@@ -1,0 +1,320 @@
+@charset "utf-8";
+
+/* 토탈 */
+.total_count {
+  font-size: 2rem; font-weight: 500;
+}
+.total_count span {
+  vertical-align: 0; color: #0068B7;
+}
+
+/* 검색창 */
+.search_input {
+  position: relative;
+  display: inline-block;
+}
+.search_input.md {
+  width: 240px;
+}
+.search_input.lg {
+  width: 412px;
+}
+.search_input > input { 
+  padding: 0 46px 0 23px; 
+  width: 100%;
+  line-height: 43px;
+  font-size: 1.4rem;
+  color: #403f3f;
+  background-color: #fff;
+  border: 1px solid #D9D9D9; 
+}
+.search_input > .btn_search {
+  position: absolute; right: 13px; top: 50%;
+  width: 24px; height: 24px;
+  font-size: 0;
+  background: transparent url(../../images/client/formstyle/icon_search.png) no-repeat center; 
+  transform: translateY(-50%);
+}
+
+
+/* 좌우분할 */  
+.search_toggle_row {
+	position: relative; 
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+	margin-bottom: 20px; 
+}  
+.searchtoggle_left {
+	float: left;
+	vertical-align: bottom;
+}
+.searchtoggle_right {
+	float: right;
+	vertical-align: bottom;
+}
+
+.searchtoggle_right > * {
+  vertical-align: top;
+}
+.searchtoggle_right .btn_md {
+  margin-left: 14px;
+} 
+.searchtoggle_right .search_input:has(+ .btn_md) > input {
+  line-height: 48px;
+}
+
+/* 페이징 */ 
+.paging_wrap {
+  padding-top: 50px;
+	font-size: 0; line-height: 0; text-align: center;
+} 
+.paging_wrap a {
+	display: inline-block; 
+  min-width: 38px;
+	font-size: 1.6rem; line-height: 38px; text-align: center; vertical-align: middle;
+	font-weight: 500;
+  border-radius: 20px;
+}
+.paging_wrap a.active {
+  color: #fff;
+  background-color: #000;
+}
+.paging_wrap .page_con {
+	margin-right: 0;
+  min-width: 20px; height: 30px;
+	font-size: 0; line-height: 0;  
+  background-repeat: no-repeat;
+  background-position: center;
+	background-color: #fff; 
+	border-radius: 0;
+}
+.paging_wrap .first_page {
+	margin-right: 12px;
+	background-image: url(../../images/client/formstyle/icon_paging_first.png);
+}
+.paging_wrap .last_page {
+	margin-left: 12px;
+	background-image: url(../../images/client/formstyle/icon_paging_last.png);
+}
+.paging_wrap .pre_page {
+	margin-right: 2px;
+	background-image: url(../../images/client/formstyle/icon_paging_prev.png);
+}
+.paging_wrap .pre_page:has(+ .active) {
+  margin-right: 12px;
+}
+.paging_wrap .next_page {
+	margin-left: 2px;
+	background-image: url(../../images/client/formstyle/icon_paging_next.png);
+}
+.paging_wrap a.active:has(+ .next_page){
+  margin-right: 12px;
+} 
+
+/* 버튼 */ 
+.btn {
+	display: inline-block;
+	position: relative;
+	font-size: 2rem; text-align: center; font-weight: 500;
+	transition: 0.2s;
+	cursor: pointer;
+}
+.btn_md {
+	padding: 0 32px; 
+  line-height: 50px; 
+}
+.btn_primary {
+  color: #fff;
+  background-color: #000;
+}
+.btn_secondary {
+  color: #fff;
+  background-color: #0068B7;
+}
+
+/* 필수값 */
+.required::before {
+	content: "*";
+	display: inline-block;
+	margin-right: 8px;
+	color: #E6002D; font-size: 2.2rem; font-weight: 500; line-height: 16px; vertical-align: bottom; 
+  font-family: Roboto, sans-serif;
+} 
+
+/* form 공통 */
+.form_style {
+	padding: 0 10px;
+	line-height: 38px; font-size: 1.5rem; color: #403f3f;
+	background-color: #fff;
+	border: 1px solid #D9D9D9;
+	box-sizing: border-box;
+}
+input[type="text"].form_style {
+	height: 40px;
+}
+input[type="text"].form_style:read-only {
+	background: #f2f2f2;
+}
+
+/* textarea */
+textarea.form_style{
+	display: block;
+	width: 100%;
+	padding: 8px 10px;
+	font-family: Notokr, sans-serif; line-height: 1.5em;
+	border: 1px solid #D9D9D9;
+}
+
+/* tab */
+.tab_line {
+  display: flex;
+  margin-bottom: 17px;
+  padding-bottom: 14px;
+  gap: 40px;
+  border-bottom: 7px solid rgba(230, 234, 240, 0.4)
+}
+.tab_line > li > a {
+  position: relative;
+  font-size: 2rem;
+}
+.tab_line > li > a::after {
+  position: absolute; bottom: -21px;
+  content: "";
+  display: block;
+  width: 100%; height: 7px;
+}
+.tab_line > li.on > a::after {
+  background-color: #0068B7;
+}
+
+@media screen and (max-width:1279px) {
+  
+}
+@media screen and (max-width:1024px) {
+
+  /* 토탈 1024 */
+  .total_count {
+    font-size: 1.8rem;
+  }
+
+  /* 검색창 1024 */
+  .search_input > input {
+    padding: 0 40px 0 18px;
+    height: 42px;
+  }
+
+  /* 좌우분할 1024 */ 
+  .searchtoggle_right .btn_md {
+    margin-left: 8px;
+    line-height: 42px; font-size: 1.6rem;
+  }
+
+  /* 페이징 1024 */
+  .paging_wrap a {
+    margin-right: 2px;
+    min-width: 28px; height: 28px; 
+    line-height: 28px; font-size: 1.5rem;
+  }
+  
+  /* 버튼 1024 */ 
+  .btn {
+    font-size: 1.8rem;
+  }
+  .btn_md { 
+    line-height: 42px;
+  }
+
+  /* tab 1024 */
+  .tab_line {
+    padding: 0;
+    gap: 8px;
+    border-bottom: none;
+    overflow: hidden;
+    overflow-x: auto;
+  }
+  .tab_line > li {
+    white-space: nowrap;
+  }
+  .tab_line > li > a {
+    display: block;
+    padding: 6px 12px;
+    text-align: center;
+    font-size: 1.8rem;
+    background-color: rgba(230, 234, 240, 0.4);
+    border-radius: 8px;
+  }
+  .tab_line > li > a::after {
+    display: none;
+  }
+  .tab_line > li.on > a {
+    color: #fff;
+    background-color: #0068B7;
+  }
+
+}
+@media screen and (max-width:768px) {
+  
+  /* 좌우분할 768 */  
+  .search_toggle_row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .searchtoggle_left:has(+ .searchtoggle_right) {
+    margin-bottom: 10px;
+  }
+  .searchtoggle_right {
+    text-align: right;
+    width: 100%; 
+  }
+  .searchtoggle_right .search_input {
+    width: 100%;
+  }
+  .searchtoggle_right .search_input > input {
+    width: 100%;
+  }
+  .searchtoggle_right .btn_md {
+    margin: 10px 0 0;
+    min-width: 90px;
+    line-height: 38px;
+  }
+
+
+  /* 페이징 768 */
+  .paging_wrap {
+    padding-top: 42px;
+  }
+  .paging_wrap a { 
+    min-width: 24px; height: 24px; 
+    line-height: 24px; 
+  } 
+  .paging_wrap .page_con {
+    min-width: 15px;
+    background-size: auto 8px;
+  }
+  .paging_wrap .first_page {
+    margin-right: 8px; 
+  }
+  .paging_wrap .last_page {
+    margin-left: 8px; 
+  }
+  .paging_wrap .pre_page {
+    margin-right: 2px; 
+  }
+  .paging_wrap .pre_page:has(+ .active) {
+    margin-right: 8px;
+  }
+  .paging_wrap .next_page {
+    margin-left: 2px; 
+  }
+  .paging_wrap a.active:has(+ .next_page){
+    margin-right: 8px;
+  } 
+
+
+  
+  
+}
+@media screen and (max-width:480px) {
+  
+}
